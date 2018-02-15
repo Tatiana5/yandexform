@@ -1,0 +1,28 @@
+{
+    "name": "tatiana5/yandexform",
+    "type": "phpbb-extension",
+    "description": "",
+    "homepage": "http://phpbbguru.net",
+    "version": "1.0.0",
+    "time": "2018-02-15",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "tatiana5",
+            "homepage": "http://phpbbguru.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpbb/epv": "dev-master"
+    },
+    "extra": {
+        "display-name": "Yandex form",
+        "soft-require": {
+           "phpbb/phpbb": "3.2.*@dev"
+        }
+    }
+}

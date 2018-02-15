@@ -1,0 +1,5 @@
+services:
+    tatiana5.yandexform.listener:
+        class: tatiana5\yandexform\event\listener
+        tags:
+            - { name: event.listener }
