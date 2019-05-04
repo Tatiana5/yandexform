@@ -21,7 +21,7 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'YA_TARGET'                 => 'Поддержать проект',
+	//'YA_TARGET'                 => 'Поддержать проект',
 	'YA_MONEY'					=> 'Яндекс.Деньгами',
 	'YA_CARD'					=> 'Банковской картой',
 	'YA_MOBILE'					=> 'Со счёта мобильного',

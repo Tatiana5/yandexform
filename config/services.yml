@@ -1,5 +1,11 @@
 services:
     tatiana5.yandexform.listener:
         class: tatiana5\yandexform\event\listener
+        arguments:
+            - '@config'
+            - '@template'
+            - '@user'
+            - '%core.root_path%'
+            - '%core.php_ext%'
         tags:
             - { name: event.listener }
