@@ -33,7 +33,7 @@ class yandexform_module extends acp_module_helper
 			'title' => 'ACP_YANDEXFORM_TITLE',
 			'vars'  => array(
 				'legend1'                    => '',
-				'yandexform_receiver'        => array('lang' => 'ACP_YANDEXFORM_RECEIVER', 'validate' => 'string', 'type' => 'text:20:15', 'explain' => false),
+				'yandexform_receiver'        => array('lang' => 'ACP_YANDEXFORM_RECEIVER', 'validate' => 'string', 'type' => 'text:20:16', 'explain' => false),
 				'yandexform_target'          => array('lang' => 'ACP_YANDEXFORM_TARGET', 'validate' => 'string', 'type' => 'text:40:255', 'explain' => false),
 				//
 				'legend2'                    => 'ACP_SUBMIT_CHANGES',
