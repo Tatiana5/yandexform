@@ -13,13 +13,13 @@ class yandexform_info
 {
 	public function module()
 	{
-		return array(
+		return [
 			'filename'	=> '\tatiana5\yandexform\acp\yandexform_module',
 			'title'		=> 'ACP_YANDEXFORM',
 			'version'	=> '0.0.1',
-			'modes'		=> array(
-				'config_yandexform'		=> array('title' => 'ACP_YANDEXFORM_EXPLAIN', 'auth' => 'ext_tatiana5/yandexform && acl_a_board', 'cat' => array('ACP_YANDEXFORM_EXPLAIN')),
-			),
-		);
+			'modes'		=> [
+				'config_yandexform'		=> ['title' => 'ACP_YANDEXFORM_EXPLAIN', 'auth' => 'ext_tatiana5/yandexform && acl_a_board', 'cat' => ['ACP_YANDEXFORM_EXPLAIN']],
+			],
+		];
 	}
 }

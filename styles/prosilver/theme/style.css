@@ -15,10 +15,11 @@
 
 .yandexpayment i {
     vertical-align: middle;
+	font-size: 2em;
 }
 
 .yandexpayment i.fa-yandex.fa-2x {
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 
 @media (max-width: 750px) {

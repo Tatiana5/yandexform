@@ -17,14 +17,14 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
-$lang = array_merge($lang, array(
+$lang = array_merge($lang, [
 	//'YA_TARGET'                 => 'Поддержать проект',
-	'YA_MONEY'					=> 'Яндекс.Деньгами',
+	'YA_MONEY'					=> 'ЮMoney',
 	'YA_CARD'					=> 'Банковской картой',
 	'YA_MOBILE'					=> 'Со счёта мобильного',
 	'YA_RUB'					=> 'рублей',
 	'YA_SEND'					=> 'Перевести',
-));
+]);

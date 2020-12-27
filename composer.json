@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "",
     "homepage": "http://phpbbguru.net",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "time": "2018-02-15",
     "license": "GPL-2.0",
     "authors": [
@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=7.0.0"
     },
     "require-dev": {
         "phpbb/epv": "dev-master"
@@ -22,7 +22,7 @@
     "extra": {
         "display-name": "Yandex form",
         "soft-require": {
-           "phpbb/phpbb": "3.2.*@dev"
+           "phpbb/phpbb": "3.3.*"
         }
     }
 }

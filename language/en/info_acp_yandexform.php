@@ -2,7 +2,7 @@
 /**
 *
 * @package yandexform
-* @copyright (c) 2019 Татьяна5
+* @copyright (c) 2019 -  Татьяна5
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -17,14 +17,14 @@ if (!defined('IN_PHPBB'))
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+	$lang = [];
 }
 
-$lang = array_merge($lang, array(
-	'ACP_YANDEXFORM'                       => 'Yandex form',
-	'ACP_YANDEXFORM_EXPLAIN'               => 'Yandex form settings',
-	'ACP_YANDEXFORM_TITLE'                 => 'Yandex form',
+$lang = array_merge($lang, [
+	'ACP_YANDEXFORM'                       => 'YooMoney form',
+	'ACP_YANDEXFORM_EXPLAIN'               => 'YooMoney form settings',
+	'ACP_YANDEXFORM_TITLE'                 => 'YooMoney form',
 	//'ACP_YANDEXFORM_TITLE_EXPLAIN'         => '',
 	'ACP_YANDEXFORM_RECEIVER'              => 'Wallet number',
 	'ACP_YANDEXFORM_TARGET'                => 'Reason for collecting money',
-));
+]);

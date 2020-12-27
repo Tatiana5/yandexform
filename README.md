@@ -1,2 +1,3 @@
 # yandexform
-phpBB 3.2 Extension
+phpBB 3.3 Extension
+YooMoney

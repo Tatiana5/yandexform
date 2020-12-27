@@ -1,49 +1,49 @@
-<!-- IF YANDEXFORM_RECEIVER and (postrow.S_FIRST_ROW or (postrow.S_LAST_ROW and S_NUM_POSTS > 1)) -->
-<form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml" class="yandexpayment">
+{% if YANDEXFORM_RECEIVER and (postrow.S_FIRST_ROW or (postrow.S_LAST_ROW and S_NUM_POSTS > 1)) %}
+<form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" class="yandexpayment">
     <fieldset class="submit-buttons">
 		<div>
-			<input type="hidden" name="receiver" value="{YANDEXFORM_RECEIVER}">
+			<input type="hidden" name="receiver" value="{{ YANDEXFORM_RECEIVER }}">
 			<input type="hidden" name="quickpay-form" value="donate">
-			<!-- IF YANDEXFORM_TARGET -->
+			{% if YANDEXFORM_TARGET %}
 			<label>
-				<input type="hidden" name="targets" value="{YANDEXFORM_TARGET}">
-				{YANDEXFORM_TARGET}
+				<input type="hidden" name="targets" value="{{ YANDEXFORM_TARGET }}">
+				{{ YANDEXFORM_TARGET }}
 			</label>
-			<!-- ENDIF -->
+			{% endif %}
 		</div>
 
 		<div>
 			<label>
-				<input type="radio" name="paymentType" value="PC" title="{L_YA_MONEY}"><span>{L_YA_MONEY}</span>
-				<i aria-hidden="true" class="icon fab fa-yandex fa-2x icon-blue" title="{L_YA_MONEY}"></i>
+				<input type="radio" name="paymentType" value="PC" title="{{ lang('YA_MONEY') }}"><span>{{ lang('YA_MONEY') }}</span>
+				<i aria-hidden="true" class="icon fab fa-yandex fa-2x icon-blue" title="{{ lang('YA_MONEY') }}"></i>
 			</label>
 			<label>
-				<input type="radio" name="paymentType" value="AC" title="{L_YA_CARD}">
-				<i aria-hidden="true" class="icon fa-cc-visa fa-2x icon-blue" title="{L_YA_CARD}"></i>
-				<i aria-hidden="true" class="icon fa-cc-mastercard fa-2x icon-blue" title="{L_YA_CARD}"></i>
-				<span>{L_YA_CARD}</span>
+				<input type="radio" name="paymentType" value="AC" title="{{ lang('YA_CARD') }}">
+				<i aria-hidden="true" class="icon fa-cc-visa fa-2x icon-blue" title="{{ lang('YA_CARD') }}"></i>
+				<i aria-hidden="true" class="icon fa-cc-mastercard fa-2x icon-blue" title="{{ lang('YA_CARD') }}"></i>
+				<span>{{ lang('YA_CARD') }}</span>
 			</label>
 			<label>
-				<input type="radio" name="paymentType" value="MC" title="{L_YA_MOBILE}">
-				<i aria-hidden="true" class="icon fa-phone-square fa-2x icon-blue" title="{L_YA_MOBILE}"></i>
-				<span>{L_YA_MOBILE}</span>
+				<input type="radio" name="paymentType" value="MC" title="{{ lang('YA_MOBILE') }}">
+				<i aria-hidden="true" class="icon fa-phone-square fa-2x icon-blue" title="{{ lang('YA_MOBILE') }}"></i>
+				<span>{{ lang('YA_MOBILE') }}</span>
 			</label>
 		</div>
 
 		<label>
 			<input name="sum" value="100" data-type="number" class="inputbox" step="10" min="0" type="number">
-			<i aria-hidden="true" class="icon fa-ruble-sign fa-2x icon-blue" title="{L_YA_RUB}"></i>
+			<i aria-hidden="true" class="icon fa-ruble-sign fa-2x icon-blue" title="{{ lang('YA_RUB') }}"></i>
 		</label>
 
-		<!-- IF YANDEXFORM_TARGET -->
-			<input type="hidden" name="formcomment" value="{YANDEXFORM_TARGET}">
-			<input type="hidden" name="short-dest" value="{YANDEXFORM_TARGET}">
-			<input type="hidden" name="comment" value="{YANDEXFORM_NICKNAME}">
-		<!-- ENDIF -->
+		{% if YANDEXFORM_TARGET %}
+			<input type="hidden" name="formcomment" value="{{ YANDEXFORM_TARGET }}">
+			<input type="hidden" name="short-dest" value="{{ YANDEXFORM_TARGET }}">
+			<input type="hidden" name="comment" value="{{ YANDEXFORM_NICKNAME }}">
+		{% endif %}
 
-		<input type="hidden" name="successURL" value="<!-- IF U_CANONICAL -->{U_CANONICAL}<!-- ELSE -->{BOARD_URL}<!-- ENDIF -->">
+		<input type="hidden" name="successURL" value="{% if U_CANONICAL %}{{ U_CANONICAL }}{% else %}{{ BOARD_URL }}{% endif %}">
 
-		<input class="button1" type="submit" name="submit" value="{L_YA_SEND}" />
+		<input class="button1" type="submit" name="submit" value="{{ lang('YA_SEND') }}" />
 	</fieldset>
 </form>
-<!-- ENDIF -->
+{% endif %}

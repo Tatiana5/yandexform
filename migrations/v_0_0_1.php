@@ -18,27 +18,27 @@ class v_0_0_1 extends \phpbb\db\migration\migration
 
 	public static function depends_on()
 	{
-			return array('\phpbb\db\migration\data\v310\dev');
+			return ['\phpbb\db\migration\data\v310\dev'];
 	}
 
 	public function update_data()
 	{
-		return array(
+		return [
 			// Add configs
-			array('config.add', array('yandexform_receiver', '')),
-			array('config.add', array('yandexform_target', 'Поддержать проект')),
+			['config.add', ['yandexform_receiver', '']],
+			['config.add', ['yandexform_target', 'Поддержать проект']],
 
 			// Current version
-			array('config.add', array('yandexform_version', '0.0.1')),
+			['config.add', ['yandexform_version', '0.0.1']],
 
 			// Add ACP modules
-			array('module.add', array('acp', 'ACP_CAT_DOT_MODS', 'ACP_YANDEXFORM')),
-			array('module.add', array('acp', 'ACP_YANDEXFORM', array(
+			['module.add', ['acp', 'ACP_CAT_DOT_MODS', 'ACP_YANDEXFORM']],
+			['module.add', ['acp', 'ACP_YANDEXFORM', [
 					'module_basename'	=> '\tatiana5\yandexform\acp\yandexform_module',
 					'module_langname'	=> 'ACP_YANDEXFORM_EXPLAIN',
 					'module_mode'		=> 'config_yandexform',
 					'module_auth'		=> 'ext_tatiana5/yandexform && acl_a_board',
-			))),
-		);
+			]]],
+		];
 	}
 }

@@ -54,10 +54,10 @@ class listener implements EventSubscriberInterface
 	public static function getSubscribedEvents()
 	{
 		// We set lower priority for some events for the case if another extension wants to use those events.
-		return array(
+		return [
 			'core.user_setup'                    => 'load_language_on_setup',
 			'core.page_header'                   => 'template_vars',
-		);
+		];
 	}
 
 	/**
@@ -68,10 +68,10 @@ class listener implements EventSubscriberInterface
 	public function load_language_on_setup($event)
 	{
 		$lang_set_ext = $event['lang_set_ext'];
-		$lang_set_ext[] = array(
+		$lang_set_ext[] = [
 			'ext_name' => 'tatiana5/yandexform',
 			'lang_set' => 'common',
-		);
+		];
 		$event['lang_set_ext'] = $lang_set_ext;
 	}
 
@@ -82,10 +82,10 @@ class listener implements EventSubscriberInterface
 			include($this->phpbb_root_path . 'includes/functions_content.' . $this->php_ext);
 		}
 
-		$this->template->assign_vars(array(
+		$this->template->assign_vars([
 			'YANDEXFORM_RECEIVER'	=> $this->config['yandexform_receiver'],
 			'YANDEXFORM_TARGET'		=> $this->config['yandexform_target'],
 			'YANDEXFORM_NICKNAME'	=> str_replace('"', '&quot;', get_username_string('username', $this->user->data['user_id'], $this->user->data['username'], $this->user->data['user_colour'])),
-		));
+		]);
 	}
 }
