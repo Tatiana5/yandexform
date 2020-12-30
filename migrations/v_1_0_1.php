@@ -18,7 +18,7 @@ class v_1_0_1 extends \phpbb\db\migration\migration
 
 	public static function depends_on()
 	{
-			return ['\tatiana5\yandexform\migrations\v0xx\v_0_0_1'];
+			return ['\tatiana5\yandexform\migrations\v_0_0_1'];
 	}
 
 	public function update_data()
