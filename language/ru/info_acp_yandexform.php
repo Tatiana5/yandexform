@@ -24,7 +24,7 @@ $lang = array_merge($lang, [
 	'ACP_YANDEXFORM'                       => 'Форма ЮMoney',
 	'ACP_YANDEXFORM_EXPLAIN'               => 'Настройки формы ЮMoney',
 	'ACP_YANDEXFORM_TITLE'                 => 'Форма ЮMoney',
-	//'ACP_YANDEXFORM_TITLE_EXPLAIN'         => '',
+	'ACP_YANDEXFORM_TITLE_EXPLAIN'         => '',
 	'ACP_YANDEXFORM_RECEIVER'              => 'Номер кошелька',
 	'ACP_YANDEXFORM_TARGET'                => 'Причина сбора',
 ]);
